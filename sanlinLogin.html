@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			.box{
+				padding-top: 200px;
+			}
+			.bgBlue{
+				height: 350px;
+				width: 100%;
+				background: #4E7DC5;
+				position: relative;
+			}
+			.marBox{
+				margin: 0 auto;
+				width: 800px;
+				height: 350px;
+			}
+			.loginBox{
+				height: 266px;
+				width: 267px;
+				margin-top: -36px;
+				float: right;
+				background-color: #D1DEEF;
+				position: relative;
+				padding: 40px 35px 0 20px;
+			}
+			.loginBox_top{
+				font-size: 22px;
+				width: 266px;
+				border-bottom: 1px solid #96B3DC;
+				color: #FDFEFE;
+				padding-bottom: 5px;
+			}
+			.loginBox_top span{
+				font-size: 15px;
+				color: #E4E6E8;
+				margin-left: 10px;
+			}
+			#input_box{
+				margin-top: 35px;
+				padding-left: 7px;
+			}
+			.inputOne span,.inputTwo span{
+				display: inline-block;
+				width: 55px;
+			}
+			.inputOne input,.inputTwo input{
+				height: 25px;
+				border-radius: 3px;
+				width: 76%;
+			}
+			.inputTwo{
+				margin-top: 15px;
+			}
+			.btn_box{
+				text-align: right;
+				margin-top: 25px;
+			}
+			.btnOne{
+				height: 32px;
+				width: 87px;
+				margin-right: 22px;
+				background-color: #ECEAB5;
+				border: 1px solid #79ACCD;
+				border-radius: 5px;
+			}
+			.btnTwo{
+				height: 32px;
+				width: 87px;
+				margin-right: 4px;
+				background-color: #019FE9;
+				border: 1px solid #5FD3FD;
+				border-radius: 5px;
+				color: white;
+			}
+			#imgS{
+				width: 100%;
+				text-align: center;
+				margin-top: 25px;
+			}
+			#imgS img{
+				width: 72%;
+			}
+			#clickImg{
+				position: absolute;
+				top: 3px;
+				right: 3px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="bgBlue">
+				<img src="img/BALL.png" style="position: absolute;left: 0;top: -16px;height: 550px;"/>
+				<img src="img/管理系统.png" style="position: absolute;top: -148px;left: 236px;"/>
+				<div class="marBox">
+					<div class="loginBox">
+
+						<img id="clickImg" src="img/d.png"/>
+						<div class="loginBox_top">智能一体化管理系统<span>110120</span></div>
+						<div id="input_box" style="display: block;">
+							<div class="inputOne">
+								<span>用户名</span><input type="text" />
+							</div>
+							<div class="inputTwo">
+								<span>密&nbsp;&nbsp;&nbsp;码</span><input type="text" />
+							</div>
+							<div class="btn_box">
+								<button class="btnOne">登录</button>
+								<button class="btnTwo">取消</button>
+							</div>
+						</div>
+						<div id="imgS" style="display: none;">
+							<img src="img/刷卡.png"/>
+							<div>员工刷卡,安全登录</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var clickImg = document.getElementById('clickImg');
+			var input_box = document.getElementById('input_box')
+			var imgS = document.getElementById('imgS')
+			clickImg.onclick = function(){
+				var Flag=(clickImg.getAttribute("src")=="img/d.png")
+				clickImg.src=Flag?"img/ka.png":"img/d.png";
+				
+				var Flag1=(input_box.style.display=="block")
+				input_box.style.display = Flag1?"none":"block";
+				
+				var Flag2=(imgS.style.display=="none")
+				imgS.style.display = Flag2?"block":"none";
+			}
+		</script>
+	</body>
+</html>
